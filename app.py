@@ -18,8 +18,7 @@ st.session_state.sidebar_state = "expanded"
 import os
 import openai
 
-os.environ["OPENAI_API_BASE"] = "https://shale.live/v1"
-os.environ["OPENAI_API_KEY"] = os.getenv("SHALE_API_KEY")
+os.environ["OPENAI_API_KEY"] = os.getenv("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")
 
 to_language_code_dict = whisper.tokenizer.TO_LANGUAGE_CODE
 to_language_code_dict["automatic"] = "auto"
