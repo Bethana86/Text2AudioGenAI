@@ -12,7 +12,7 @@ import emoji
 #load_dotenv(find_dotenv())
 
 # Streamlit
-st.set_page_config(page_title="TalkativeAI", layout="wide", initial_sidebar_state=st.session_state.get("sidebar_state", "expanded"))
+st.set_page_config(page_title="ALGOSTATS AI AudioGenerator", layout="wide", initial_sidebar_state=st.session_state.get("sidebar_state", "expanded"))
 st.session_state.sidebar_state = "expanded"
 
 import os
@@ -94,7 +94,7 @@ def autoplay_audio(file_path: str):
         )
 
 
-example1 = "Tell me a haiku about AI"
+example1 = "Tell me about Generative AI"
 
 
 with st.sidebar:
@@ -145,3 +145,12 @@ if (prompt := st.chat_input("Your message")) or Example1 or len(audio):
 
     # Add assistant response to chat history
     st.session_state.messages.append({"role": "assistant", "content": response})
+
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)  
