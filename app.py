@@ -12,7 +12,7 @@ import emoji
 #load_dotenv(find_dotenv())
 
 # Streamlit
-st.set_page_config(page_title="ALGOSTATS AI AudioGenerator", layout="wide", initial_sidebar_state=st.session_state.get("sidebar_state", "expanded"))
+st.set_page_config(page_title="ALGOSTATS AudioGenAI", layout="wide", initial_sidebar_state=st.session_state.get("sidebar_state", "expanded"))
 st.session_state.sidebar_state = "expanded"
 
 import os
@@ -99,7 +99,7 @@ example1 = "Tell me about Generative AI"
 
 with st.sidebar:
     audio = audiorecorder("Click to send voice message", "Recording... Click when you're done", key="recorder")
-    st.title("TalkativeAI")
+    st.title("ALGOSTATS AudioGenAI")
     language = st.selectbox('Language', language_list, index=24)
     lang = to_language_code_dict[language.lower()]
     precision = st.selectbox("Precision", ["whisper-tiny", "whisper-base", "whisper-small"])
