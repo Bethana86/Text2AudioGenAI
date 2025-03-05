@@ -12,7 +12,7 @@ import emoji
 #load_dotenv(find_dotenv())
 
 # Streamlit
-st.set_page_config(page_title="ALGOSTATS AudioGenAI", layout="wide", initial_sidebar_state=st.session_state.get("sidebar_state", "expanded"))
+st.set_page_config(page_title="AudioGenAI", layout="wide", initial_sidebar_state=st.session_state.get("sidebar_state", "expanded"))
 st.session_state.sidebar_state = "expanded"
 
 import os
